@@ -1,7 +1,5 @@
 package Sort;
-
 import java.util.Arrays;
-
 public class QuickSorting {
     /*
     快速排序的思路分析
@@ -57,7 +55,6 @@ public class QuickSorting {
                 l+=1;
             }
         }
-
         //如果 l==r 必须l++ r-- 否则会栈溢出
         if(l==r)
         {
