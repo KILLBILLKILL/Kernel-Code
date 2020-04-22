@@ -1,3 +1,5 @@
+package Sort;
+
 public class BinarySearch {
     public static int  binarysearch(int a[],int target)
     {

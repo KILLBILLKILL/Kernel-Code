@@ -1,5 +1,7 @@
-import java.lang.reflect.Array;
+package Sort;
+
 import java.util.Arrays;
+
 public class BubbleSort {
     //冒泡排序就是 每一次 将这个序列中最大的放在后面
     //序列-1
