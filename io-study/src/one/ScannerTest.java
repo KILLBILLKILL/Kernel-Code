@@ -1,5 +1,7 @@
 package one;
 
+import java.util.Scanner;
+
 public class ScannerTest {
     /*
 
@@ -8,10 +10,23 @@ public class ScannerTest {
           先输入一行数字（整形）4
           在输入一行数字（一组数字）4个数字：5 6 2 1
           再做 业务
-
-
-
-
-
      */
+    public static void main(String[] args)
+    {
+        //10组测试用例
+        for(int i=0;i<10;i++)
+        {
+            //每组测试例要干的事
+            Scanner sc=new Scanner(System.in);
+
+            //1.都是阻塞的方法 造成当前线程阻塞
+            //2.满足一定的条件才返回：
+            // hasNext满足换行符或空格等字符才返回
+            //hasNextLine 满足换行符
+            //hasNextInt不满足int数值的字符
+            sc.hasNext();
+            System.out.println("OK");
+
+        }
+    }
 }
