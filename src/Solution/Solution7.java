@@ -35,10 +35,7 @@ public class Solution7 {
             return true;
         }
     }
-
-
     public static void main(String[] args) {
-
         int arrM[]={1,2,2,3,3,4,4,5,5};
         int arrN[]={1,2,3,4,5};
         Boolean m=isIn(arrM,arrN);

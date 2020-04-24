@@ -1,5 +1,4 @@
 package Sort;
-
 public class BinarySearch {
     public static int  binarysearch(int a[],int target)
     {
@@ -21,7 +20,6 @@ public class BinarySearch {
         return -1;
     }
     public static void main(String[] args) {
-
         int a[]={1,4,8,12,34,56,78,100};
         int target=12;
         int c=binarysearch(a,12);

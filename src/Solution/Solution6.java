@@ -1,11 +1,8 @@
 package Solution;
-
 /*
 两个栈实现一个队列
  */
-
 import java.util.Stack;
-
 public class Solution6 {
     Stack<Integer> stack1=new Stack<Integer>();
     Stack<Integer> stack2=new Stack<Integer>();
@@ -37,7 +34,6 @@ public class Solution6 {
         Integer head=stack2.pop();
         return head;
     }
-
     public static void main(String[] args) {
         Solution6 solution6 =new Solution6();
         solution6.push(1);
@@ -50,8 +46,4 @@ public class Solution6 {
         solution6.push(5);
         System.out.println(solution6.pop());
     }
-
-
-
-
 }
