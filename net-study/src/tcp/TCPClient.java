@@ -2,7 +2,6 @@ package tcp;
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
-
 public class TCPClient {
     //本机默认的域名，默认IP就是127.0.0.1
     private static final String Host="localhost";
@@ -31,9 +30,7 @@ public class TCPClient {
             //接收服务端的响应信息
             String response=br.readLine();
             System.out.println("接收到服务端响应："+response+"\n");
-
         }
-
         }
     }
 
