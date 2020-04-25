@@ -3,7 +3,6 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.*;
-
 public class TCPServer {
     private  static final int PORT=9999;
     /**
@@ -19,7 +18,6 @@ public class TCPServer {
 //    private  static ThreadPoolExecutor POOL=new ThreadPoolExecutor(0,Integer.MAX_VALUE,
 //            30, TimeUnit.SECONDS,new
 //            LinkedBlockingDeque<>(),new ThreadPoolExecutor.CallerRunsPolicy());
-
     //线程池中使用的线程，在参数3+4的时间范围内，是可以重用
     //单个线程的线程池 只有一个正式工
 //    private static final ExecutorService EXE=Executors.newSingleThreadExecutor();
