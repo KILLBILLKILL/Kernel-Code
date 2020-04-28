@@ -8,20 +8,10 @@ package Solution;
  * 例如输入前序遍历序列{1,2,4,7,3,5,6,8}
  * 和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回
  */
-class TreeNode
-{
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode (int val)
-    {
-        this.val=val;
-    }
-}
 
 public class Sulution4 {
 
-    public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+    public TreeNode reConstructBinaryTree(int [] pre, int [] in) {
         TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
         return root;
     }
