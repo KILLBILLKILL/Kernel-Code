@@ -15,7 +15,13 @@ public class Request {
     private Map<String,String> parameters=new HashMap<>();
     /**
      * 类似单例的写法  提供私有的构造方法
+     *
      */
+    public Request()
+    {
+
+
+    }
     /**
      *通过客户端发送的Http请求数据 ，转换为request请求类
      * 包装请求方法，url,http版本号。请求头。请求参数
@@ -39,12 +45,13 @@ public class Request {
             {
                 String []parts=header.split(":");
                 request.headers.put(parts[0].trim(),parts[1].trim());
-                System.out.printf("请求头 %s=%s",parts[0].trim(),parts[1].trim());
+                System.out.printf("请求头 %s=%s\n",parts[0].trim(),parts[1].trim());
                 System.out.println();
             }
             //如果是POST方法提交，并且有Content-Length，表示请求数据中包含我们的请求体
             //需要处理请求体
-            if("POST".equalsIgnoreCase(request.method)&&request.headers.containsKey("Content-Length"))
+            if("POST".equalsIgnoreCase(request.method)
+                    &&request.headers.containsKey("Content-Length"))
             {
                 int len=Integer.parseInt(request.headers.get("Content-Length"));
                 char[]chars=new char[len];
@@ -103,5 +110,33 @@ public class Request {
                 this.parameters.put(parrms[0],parrms[1]);
             }
         }
+    }
+
+    /**
+     * 根据请求头中的key获取value
+     * @param key
+     * @return
+     */
+    public String getHeader(String key)
+    {
+        return headers.get(key);
+    }
+
+    /**
+     * 根据请求参数中的key获取value
+     * @param key
+     * @return
+     */
+    public String getParameter(String key)
+    {
+        return parameters.get(key);
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
