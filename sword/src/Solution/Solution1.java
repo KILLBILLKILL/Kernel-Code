@@ -8,19 +8,20 @@ public class Solution1 {
      判断数组中是否含有该整数。
      */
     public boolean Find(int target, int [][] array) {
-        int row=array.length;
-        int col=array[0].length;
-        int c=col-1;
-        int r=0;
-        while(c>=0&&r<row)
+        int rows=array.length;
+        int clos=array[0].length;
+        int j=clos-1;
+        int i=0;
+        while(j>=0&&i<rows)
         {
-            if(target==array[r][c])
+            if(array[i][j]==target)
                 return true;
-            if(target<array[r][c])
-                c--;
+            if(array[i][j]>target)
+                j--;
             else
-                r++;
-            }
+                i++;
+        }
+
         return false;
     }
     public static void main(String[] args){

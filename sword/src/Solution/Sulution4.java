@@ -10,28 +10,34 @@ package Solution;
  */
 
 public class Sulution4 {
-
-    public TreeNode reConstructBinaryTree(int [] pre, int [] in) {
-        TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
+    public static TreeNode reConstructBinaryTree(int [] pre,int [] in){
+        if(pre.length==0||in.length==0)
+            return null;
+        TreeNode root= help(pre,0,pre.length-1,in,0,in.length-1);
         return root;
     }
-    private TreeNode reConstructBinaryTree(int []pre,int startpre,int endpre,int[]in,int startin,int endin)
+    public static TreeNode help(int []pre,int startpre,int endpre,int []in,int startin,int endin)
     {
-        if(startin>endin||startpre>endpre)
-        {
+        if(startpre>endpre||startin>endin)
             return null;
-        }
         TreeNode root=new TreeNode(pre[startpre]);
-        for(int i=startin;i<=endin;i++)
+        for(int i=startin;i<in.length;i++)
         {
-            if(in[i]==pre[startpre])
+            if(pre[startpre]==in[i])
             {
-                root.left=reConstructBinaryTree(pre,startpre+1,startpre+i-startin,in,startin,i-1);
-                root.right=reConstructBinaryTree(pre,startpre+i-startin+1,endpre,in,i+1,endin);
-                break;
+                root.right=help(pre,startpre+i-startin+1,endpre,in,i+1,endin);
+                root.left=help(pre,startpre+1,startpre+i-startin,in,startin,i-1);
             }
         }
         return root;
+    }
+
+    public static void main(String[] args) {
+
+        int i[]={1,2,4,7,3,5,6,8};
+        int j[]={4,7,2,1,5,3,8,6};
+        TreeNode root=reConstructBinaryTree(i,j);
+
     }
 
 }

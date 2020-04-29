@@ -9,21 +9,20 @@ public class Solution2 {
      * 则经过替换之后的字符串为We%20Are%20Happy。
      */
     public static String replaceSpace(StringBuffer str) {
-        int length=str.length();
-        StringBuilder strc=new StringBuilder();
-        for(int i=0;i<length;i++)
-        {
-           char c=str.charAt(i);
-            if(c==' ')
+           StringBuilder sb=new StringBuilder();
+            int length=str.length();
+            for(int i=0;i<length;i++)
             {
-                strc.append("%20");
+                if(str.charAt(i)==' ')
+                {
+                    sb.append("%20");
+                }
+                else{
+                    sb.append(str.charAt(i));
+                }
             }
-            else{
-                strc.append(c);
+            return sb.toString();
 
-            }
-        }
-        return strc.toString();
     }
     public static void main(String[] args) {
         StringBuffer str=new StringBuffer("j h g f d s");
