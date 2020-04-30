@@ -9,21 +9,24 @@ package Solution;
  */
 public class Solution7 {
     public int Fibonacci(int n) {
-        int pre=1;
-        int prepre=0;
-        int result=0;
         if(n==0)
             return 0;
         if(n==1)
             return 1;
-        for(int i=2;i<n+1;i++)
-        {
-             result=pre+prepre;
-             prepre=pre;
-             pre=result;
-        }
+        if(n==2)
+            return 1;
 
-        return result;
+        int sum =0;
+        int pre=1;
+        int prepre=1;
+
+        for(int i=3;i<=n;i++)
+        {
+         sum=pre+prepre;
+         pre=prepre;
+         prepre=sum;
+        }
+        return sum;
     }
 
 }

@@ -9,6 +9,40 @@ package Solution;
  */
 public class Solution25 {
 
+    public RandomListNode Clone(RandomListNode pHead)
+    {
+        if(pHead==null)
+            return null;
+        RandomListNode currentNode=pHead;
+        while(currentNode!=null)
+        {
+            RandomListNode cloneNode=new RandomListNode(currentNode.lable);
+            RandomListNode nextNode=currentNode.next;
+            currentNode.next=cloneNode;
+            cloneNode.next=nextNode;
+            currentNode=nextNode;
+        }
+        currentNode=pHead;
+        while(currentNode!=null)
+        {
+            currentNode.next.random=currentNode.random==null?null:currentNode.random.next;
+            currentNode=currentNode.next.next;
+        }
+        currentNode=pHead;
+        RandomListNode p=pHead.next;
+        while(currentNode!=null)
+        {
+            RandomListNode clone=currentNode.next;
+            currentNode.next=clone.next;
+            clone.next=clone.next==null?null:clone.next.next;
+            currentNode=currentNode.next;
+
+        }
+
+        return p;
+
+    }
+
 
 
 

@@ -9,27 +9,20 @@ package Solution;
  * NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。
  */
 public class Solution6 {
-
-
-
     public int minNumberInRotateArray(int [] array) {
-        int low=0;
-        int high=array.length-1;
-        while(low<high)
-        {
-            int mid=(high+low)/2;
-            if(array[mid]>array[high])
-            {
-                low=mid+1;
+        int left=0;
+        int right=array.length-1;
+        while(left<=right) {
+            int mid = (left + right) / 2;
+            if (array[mid] < array[right]) {
+                right = mid;
+            } else if(array[mid]>array[right]) {
+                left=mid+1;
             }
-            else if(array[mid]==array[high]){
-
-                high=high-1;
-            }
-            else{
-                high=mid;
+           else{
+                right = right - 1;
             }
         }
-        return array[low];
+        return  array[left];
     }
 }
