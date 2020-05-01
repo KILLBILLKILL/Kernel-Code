@@ -10,9 +10,9 @@ import java.util.ArrayList;
  * 输入一个字符串,长度不超过9(可能有字符重复),字符只包括大小写字母。
  */
 public class Solution27 {
-    public ArrayList<String> Permutation(String str) {
-
-        
-
-    }
+//    public ArrayList<String> Permutation(String str) {
+//
+//
+//
+//    }
 }

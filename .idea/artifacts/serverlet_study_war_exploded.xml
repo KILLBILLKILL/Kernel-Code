@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="serverlet-study:war exploded">
+    <output-path>$PROJECT_DIR$/serverlet-study/target/servlet-stufy</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>serverlet-study</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="serverlet-study" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/serverlet-study/target/servlet-stufy/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="serverlet-study/web/Web" />
+    </root>
+  </artifact>
+</component>

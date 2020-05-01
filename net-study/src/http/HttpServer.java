@@ -11,15 +11,10 @@ public class HttpServer {
         ServerSocket serverSocket=new ServerSocket(PORT);
         while (true)
         {
-
             //阻塞等待新的客户端连接
             Socket socket= serverSocket.accept();
             POOL.execute(new HttpTask(socket));
-
         }
-
     }
-
-
 }
 

@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Kernel-Code.iml" filepath="$PROJECT_DIR$/Kernel-Code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Test10/Test10.iml" filepath="$PROJECT_DIR$/Test10/Test10.iml" />
       <module fileurl="file://$PROJECT_DIR$/data-structure/data-structure.iml" filepath="$PROJECT_DIR$/data-structure/data-structure.iml" />
       <module fileurl="file://$PROJECT_DIR$/io-study/io-study.iml" filepath="$PROJECT_DIR$/io-study/io-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-test/maven-test.iml" filepath="$PROJECT_DIR$/maven-test/maven-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/net-study/net-study.iml" filepath="$PROJECT_DIR$/net-study/net-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet-study/servlet-study.iml" filepath="$PROJECT_DIR$/servlet-study/servlet-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/sword/sword.iml" filepath="$PROJECT_DIR$/sword/sword.iml" />
     </modules>
   </component>

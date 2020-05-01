@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-test" />
+        <module name="servlet-study" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="maven-test" target="1.5" />
+      <module name="serverlet-study" target="1.8" />
+      <module name="serverletstudy" target="1.5" />
+      <module name="servlet-study" target="1.8" />
+      <module name="servletstudy" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
